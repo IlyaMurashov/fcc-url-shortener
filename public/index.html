@@ -12,23 +12,27 @@
 <div class="container">
     <h3>Short link microservice</h3>
     <em>A freeCodeCamp project by Ilya Murashov</em>
-    <p>This service allows simple conversion between UNIX and human readable time formats.</p>
+    <p>This service allows URL shortening.</p>
 
     <h4>Usage example</h4>
     <p>
-        <code>https://[service_address]/December 15, 2015</code>
+        To add a new link type in the desired URL after <code>/new/</code> (please omit <code>http[s]://</code> from the URL):
+    </p>
+    <p>
+        <code>https://fcc-im-shortly.herokuapp.com/new/facebook.com</code>
         <br>
         or
         <br>
-        <code>https://[service_address]/1450134000000</code>
+        <code>https://fcc-im-shortly.herokuapp.com/new/www.facebook.com</code>
     </p>
 
-    <h4>Response example</h4>
-    <p>In both query scenarios you should get the output in the following format:</p>
-    <pre><code>{
-    "unix": 1450134000000,
-    "natural": "Tue Dec 15 2015"
-}</code></pre>
+    <p>
+        You will be notified about the shortened version of the link in the format which is similar to
+        <br>
+        <code>{"full-url":"facebook.com","short_url":"fcc-im-shortly.herokuapp.com/16"}</code>
+        <br>
+        In this example, to be redirected to <code>facebook.com</code> follow the <code>fcc-im-shortly.herokuapp.com/16</code> link.
+    </p>
 </div>
 </body>
 </html>
