@@ -91,15 +91,10 @@ const getNextId = (db) => {
 };
 
 const queryUrlById = (db, id) => {
-
-  console.log(`searching id: ${id}`);
-  const thisID = id;
-
   return new Promise((resolve, reject) => {
     db.collection('shorts')
       .findOne({ _id: parseInt(id) })
       .then(found => {
-        console.log(`Found: ${found}`);
         db.close();
         resolve(found.fullURL);
       })
